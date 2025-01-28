@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useState } from "react";
 import SideNav from './SideNav'
 import Header from './Header'
-import MainContent from './MainContent'
+import ProfileCarousel from './ProfileCarousel'
 
 function Main() {
+
+    const [isSideNavOpen, setIsSideNavOpen] = useState(false);
+
+    const toggleSideNav = () => {
+    setIsSideNavOpen(!isSideNavOpen);
+    };
+    
   return (
     <div  className="flex min-h-screen">
         <SideNav />
