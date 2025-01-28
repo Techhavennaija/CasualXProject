@@ -5,7 +5,7 @@ import ProfileCarousel from './ProfileCarousel'
 
 function Main() {
 
-    const [isSideNavOpen, setIsSideNavOpen] = useState(false);
+    const [isSideNavOpen, setIsSideNavOpen] = useState(true);
 
     const toggleSideNav = () => {
     setIsSideNavOpen(!isSideNavOpen);
@@ -13,9 +13,9 @@ function Main() {
     
   return (
     <div  className="flex min-h-screen">
-        <SideNav />
+        <SideNav isOpen={isSideNavOpen} toggleSideNav={toggleSideNav} />
         <div className="flex-1">
-            <Header />
+            <Header isSideNavOpen={isSideNavOpen} />
         </div>
     </div>
   )
