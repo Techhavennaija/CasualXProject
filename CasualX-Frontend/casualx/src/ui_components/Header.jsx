@@ -5,7 +5,7 @@ function Header({ isSideNavOpen }) {
   return (
     <header
         className={`sticky top-0 z-50 bg-gray-800 text-white shadow-md p-4 transition-all duration-300 ${
-        isSideNavOpen ? "ml-54" : "ml-16"
+        isSideNavOpen ? "ml-44" : "ml-16"
         }`}
     >
         <div className="flex justify-between items-center px-2 py-2">

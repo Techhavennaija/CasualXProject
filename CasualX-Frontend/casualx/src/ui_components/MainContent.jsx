@@ -1,9 +1,9 @@
 import React from 'react'
 import ProfileCarousel from './ProfileCarousel'
 
-function MainContent() {
+function MainContent({ isSideNavOpen }) {
   return (
-    <div className={`flex-1 transition-all duration-300 "ml-64" : "ml-16"`}>
+    <div className={`flex-1 pt-10 transition-all duration-300 ${isSideNavOpen ? "ml-44" : "ml-16"} `}>
       <ProfileCarousel />
     </div>
   )

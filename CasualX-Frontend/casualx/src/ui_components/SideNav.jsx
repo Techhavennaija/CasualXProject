@@ -44,7 +44,7 @@ function SideNav({ isOpen, toggleSideNav }) {
   return (
       <div
         className={`fixed top-0 left-0 h-screen bg-gray-800 text-white transition-all duration-300 ${
-        isOpen ? "w-54" : "w-16" }`}
+        isOpen ? "w-44" : "w-16" }`}
       >
     <div className="flex items-center justify-between p-2 pt-4 bg-gray-800">
       <div className="rounded-full outline-solid outline-grey-800 w-7 h-7 bg-gray-700 flex items-center justify-center">

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SideNav from './SideNav'
 import Header from './Header'
-import ProfileCarousel from './ProfileCarousel'
+import MainContent from "./MainContent";
 
 function Main() {
 
@@ -16,6 +16,7 @@ function Main() {
         <SideNav isOpen={isSideNavOpen} toggleSideNav={toggleSideNav} />
         <div className="flex-1">
             <Header isSideNavOpen={isSideNavOpen} />
+            <MainContent isSideNavOpen={isSideNavOpen}/>
         </div>
     </div>
   )

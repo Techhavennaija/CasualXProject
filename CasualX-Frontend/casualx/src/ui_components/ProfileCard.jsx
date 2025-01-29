@@ -1,6 +1,7 @@
 import React from 'react'
 
-function ProfileCard() {
+function ProfileCard({ profile }) {
+
   return (
     <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
       {/* Background Image */}
