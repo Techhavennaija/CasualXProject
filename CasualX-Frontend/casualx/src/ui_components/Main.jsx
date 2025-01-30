@@ -11,10 +11,12 @@ function Main() {
     setIsSideNavOpen(!isSideNavOpen);
     };
     
+    
+
   return (
     <div  className="flex min-h-screen">
-        <SideNav isOpen={isSideNavOpen} toggleSideNav={toggleSideNav} />
         <div className="flex-1">
+            <SideNav isOpen={isSideNavOpen} toggleSideNav={toggleSideNav} />
             <Header isSideNavOpen={isSideNavOpen} />
             <MainContent isSideNavOpen={isSideNavOpen}/>
         </div>

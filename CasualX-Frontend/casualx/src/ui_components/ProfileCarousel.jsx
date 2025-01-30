@@ -20,7 +20,7 @@ import ProfileCard from './ProfileCard';
       phone: "+987 654 3210",
       location: "London, UK",
       bio: "UI/UX Designer specializing in user-centered design.",
-      image: "https://via.placeholder.com/400",
+      image: "../assets/images/IMG_2025.jpg",
       },
       {
       id: 3,
@@ -93,10 +93,10 @@ import ProfileCard from './ProfileCard';
         dots: true,
         infinite: true,
         speed: 1500,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3500,
         responsive: [
         {
             breakpoint: 1024,
@@ -115,14 +115,16 @@ import ProfileCard from './ProfileCard';
 
 function ProfileCarousel() {
   return (
-    <div className="container mx-auto p-8">
-      <Slider {...settings}>
-        {profiles.map((profile) => (
-          <div key={profile.id} className="px-2">
-            <ProfileCard profile={profile} />
-          </div>
-        ))}
-      </Slider>
+    <div className="container mx-auto px-4  overflow-hidden">
+      <div className="max-w-full mx-auto">
+        <Slider {...settings}>
+          {profiles.map((profile) => (
+            <div key={profile.id} className="px-1">
+              <ProfileCard profile={profile} />
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   )
 }
