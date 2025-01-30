@@ -8,23 +8,23 @@ import ProfileCard from './ProfileCard';
     const profiles = [
       {
       id: 1,
-      name: "John Doe",
-      phone: "+123 456 7890",
+      name: "Ayofe Omolara",
+      phone: "+2348115128285",
       location: "New York, USA",
       bio: "Software Engineer with a passion for building scalable applications.",
       image: "https://via.placeholder.com/400",
       },
       {
       id: 2,
-      name: "Jane Smith",
-      phone: "+987 654 3210",
+      name: "Omolara",
+      phone: "+2348115128285",
       location: "London, UK",
       bio: "UI/UX Designer specializing in user-centered design.",
       image: "../assets/images/IMG_2025.jpg",
       },
       {
       id: 3,
-      name: "Alice Johnson",
+      name: "Blessing",
       phone: "+111 222 3333",
       location: "Sydney, Australia",
       bio: "Data Scientist with expertise in machine learning and AI.",
@@ -32,7 +32,7 @@ import ProfileCard from './ProfileCard';
       },
       {
       id: 4,
-      name: "Bob Brown",
+      name: "Miemie",
       phone: "+444 555 6666",
       location: "Toronto, Canada",
       bio: "Full-stack developer with a focus on modern web technologies.",
@@ -115,8 +115,8 @@ import ProfileCard from './ProfileCard';
 
 function ProfileCarousel() {
   return (
-    <div className="container mx-auto px-4  overflow-hidden">
-      <div className="max-w-full mx-auto">
+    <div className="container w-5/6 overflow-hidden">
+      <div className="max-w-full">
         <Slider {...settings}>
           {profiles.map((profile) => (
             <div key={profile.id} className="px-1">

@@ -27,12 +27,33 @@ function Header({ isSideNavOpen }) {
         }`}
     >
         <div className="flex justify-between items-center px-2 py-4">
-          <a href="/" className="text-xl font-bold text-white hover:text-teal-100 transition-colors">Logo</a>
-          <div className='rounded-full bg-gray-700 w-10 h-10 flex items-center justify-center'>
-            <button className="p-2 text-white hover:bg-teal-700 rounded-lg transition-colors">
-              <FaSearch size={20} className="cursor-pointer" />
+          <div className="logo">
+            <a href="/" className="text-xl font-bold text-white hover:text-teal-100 transition-colors">Logo</a>
+          </div>
+
+          {/* Search Icon */}
+          <div className="flex items-center space-x-4 px-6">
+            <div className='rounded-full outline-solid outline-gray-500 bg-gray-700 w-7 h-7 flex items-center justify-center'>
+              <button className="p-2 text-white rounded-lg transition-colors">
+                <FaSearch size={20} className="cursor-pointer" />
+              </button>
+            </div>
+          
+            {/* Signup Button */}
+            <button className="px-4 py-1 bg-blue-700 shadow-md text-white rounded-full transition-all"
+              onClick={() => alert("Signup clicked!")} // Add signup logic here
+              >Signup
             </button>
-                
+
+            {/* Dark Mode Toggle */}
+            <button onClick={toggleDarkMode} className="focus:outline-none">
+              {isDarkMode ? (
+                <FaSun size={22} className="text-white-500" />
+              ) : (
+                <FaMoon size={22} className="text-white-800 dark:text-white" />
+              )}
+            </button>
+
           </div>
         </div>
   </header>
