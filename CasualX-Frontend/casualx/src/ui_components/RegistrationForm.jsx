@@ -29,6 +29,16 @@ function RegistrationForm() {
         availabilityOutcall: '',
         languageSpoken: '',
         languageLevel: '',
+        services: [],
+        currency: '', // Add currency field
+        oneHourRateIncall: '', // Add 1-hour rate fields
+        oneHourRateOutcall: '',
+        overnightRateIncall: '', // Add overnight rate fields
+        overnightRateOutcall: '',
+        weekendRateIncall: '', // Add weekend rate fields
+        weekendRateOutcall: '',
+        photos: [], // Add photos field
+        verificationPhoto: null, // Add verification photo field
     });
 
     const nextStep = () => setStep(step + 1);
@@ -47,6 +57,12 @@ function RegistrationForm() {
                 return <Step2 formData={formData} handleChange={handleChange} nextStep={nextStep} prevStep={prevStep} />;
             case 3:
                 return <Step3 formData={formData} handleChange={handleChange} prevStep={prevStep} />;
+            case 4:
+                return <Step4 formData={formData} handleChange={handleChange} prevStep={prevStep} nextStep={nextStep} />;
+            case 5:
+                return <Step5 formData={formData} handleChange={handleChange} prevStep={prevStep} nextStep={nextStep} />;
+            case 6:
+                return <Step6 formData={formData} handleChange={handleChange} prevStep={prevStep} submitForm={submitForm} />;
             default:
                 return <Step1 formData={formData} handleChange={handleChange} nextStep={nextStep} />;
         }
