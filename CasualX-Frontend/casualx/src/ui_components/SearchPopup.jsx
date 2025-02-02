@@ -3,23 +3,23 @@ import React from 'react'
 function SearchPopUp(onClose) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg w-11/12 max-w-md">
+      <div className="bg-sky-900 text-white dark:bg-gray-800 p-6 rounded-lg w-11/12 max-w-md">
         <h2 className="text-xl font-bold mb-4">Escort Search</h2>
-        <form>
+        <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Name Field */}
           <div className="mb-4">
             <label className="block text-sm font-medium mb-1">Name</label>
             <input
               type="text"
               placeholder="Enter name"
-              className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
+              className="w-full p-2 border rounded-full dark:bg-gray-700 dark:border-gray-600"
             />
           </div>
 
           {/* Country Field */}
           <div className="mb-4">
             <label className="block text-sm font-medium mb-1">Country</label>
-            <select className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600">
+            <select className="w-full p-2 border rounded-full dark:bg-gray-700 dark:border-gray-600">
               <option value="">Select Country</option>
               <option value="USA">USA</option>
               <option value="UK">UK</option>
@@ -31,7 +31,7 @@ function SearchPopUp(onClose) {
           {/* State Field */}
           <div className="mb-4">
             <label className="block text-sm font-medium mb-1">State</label>
-            <select className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600">
+            <select className="w-full p-2 border rounded-full dark:bg-gray-700 dark:border-gray-600">
               <option value="">Select State</option>
               <option value="California">California</option>
               <option value="Texas">Texas</option>
@@ -42,7 +42,7 @@ function SearchPopUp(onClose) {
           {/* City Field */}
           <div className="mb-4">
             <label className="block text-sm font-medium mb-1">City</label>
-            <select className="w-full p-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600">
+            <select className="w-full p-2 border rounded-full dark:bg-gray-700 dark:border-gray-600">
               <option value="">Select City</option>
               <option value="Los Angeles">Los Angeles</option>
               <option value="Houston">Houston</option>
@@ -74,9 +74,9 @@ function SearchPopUp(onClose) {
             <label className="block text-sm font-medium mb-1">Age</label>
             <input
               type="range"
-              min="18"
-              max="100"
-              defaultValue="30"
+              min="20"
+              max="60"
+              defaultValue="25"
               className="w-full"
             />
             <div className="flex justify-between text-sm">

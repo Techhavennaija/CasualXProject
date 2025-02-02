@@ -4,54 +4,52 @@ function Step2({ formData, handleChange, nextStep, prevStep }) {
   return (
     <div>
       <h2 className="text-2xl font-bold mb-4">Additional Details</h2>
-      <div className="space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Education, Occupation, About */}
-        <input
-          type="text"
-          name="education"
-          value={formData.education}
-          onChange={handleChange}
-          placeholder="Education"
-          className="w-full p-2 border rounded"
-        />
-        <input
-          type="text"
-          name="occupation"
-          value={formData.occupation}
-          onChange={handleChange}
-          placeholder="Occupation"
-          className="w-full p-2 border rounded"
-        />
-        <textarea
-          name="about"
-          value={formData.about}
-          onChange={handleChange}
-          placeholder="About"
-          className="w-full p-2 border rounded"
-          rows="4"
-        />
+        <div>
+          <label className="block mb-2">Education</label>
+            <input
+              type="text"
+              name="education"
+              value={formData.education}
+              onChange={handleChange}
+              placeholder="Education"
+              className="block w-full bg-gray-200 text-gray-700 text-sm rounded py-3 px-4 focus:outline-none focus:bg-white"
+            />
+        </div>
+        <div>
+        <label className="block mb-2">Occupation</label>
+          <input
+            type="text"
+            name="occupation"
+            value={formData.occupation}
+            onChange={handleChange}
+            placeholder="Occupation"
+            className="block w-full bg-gray-200 text-gray-700 text-sm rounded py-3 px-4 focus:outline-none focus:bg-white"
+          />
+        </div>
+        <div className="md:col-span-2">
+          <label className="block mb-2">Bio</label>
+            <textarea
+              name="about"
+              value={formData.about}
+              onChange={handleChange}
+              placeholder="About"
+              className="block w-full bg-gray-200 text-gray-700 text-sm rounded py-3 px-4 focus:outline-none focus:bg-white resize-none"
+              rows="4"
+            />
+        </div>
 
         {/* Body Details */}
-        <h1 className="text-xl font-bold mt-6 mb-4">Body Details</h1>
-        <select
-          name="ethnicity"
-          value={formData.ethnicity}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-        >
-          <option value="">Select Ethnicity</option>
-          <option value="asian">Asian</option>
-          <option value="african">African</option>
-          <option value="caucasian">Caucasian</option>
-          <option value="hispanic">Hispanic</option>
-          <option value="other">Other</option>
-        </select>
-        <select
-          name="bustSize"
-          value={formData.bustSize}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-        >
+        <h1 className="text-xl font-bold md:col-span-2">Body Details</h1>
+        <div>
+          <label className="block mb-2">Bust-Size</label>
+          <select
+            name="bustSize"
+            value={formData.bustSize}
+            onChange={handleChange}
+            className="block w-full bg-gray-200 text-gray-700 text-sm rounded py-3 px-4 focus:outline-none focus:bg-white"
+          >
           <option value="">Choose Bust Size</option>
           <option value="large">None</option>
           <option value="enormous">Enormous E+</option>
@@ -62,12 +60,15 @@ function Step2({ formData, handleChange, nextStep, prevStep }) {
           <option value="large">Small A</option>
           <option value="medium">Very Small</option>
         </select>
-        <select
-          name="height"
-          value={formData.height}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-        >
+      </div>
+      <div>
+        <label className="block mb-2">Height</label>
+          <select
+            name="height"
+            value={formData.height}
+            onChange={handleChange}
+            className="block w-full bg-gray-200 text-gray-700 text-sm rounded py-3 px-4 focus:outline-none focus:bg-white"
+          >
           <option value="">Select Height</option>
           <option value="average">Very Tall</option>
           <option value="average">Tall</option>
@@ -75,13 +76,16 @@ function Step2({ formData, handleChange, nextStep, prevStep }) {
           <option value="average">Medium</option>
           <option value="tall">Short</option>
           <option value="portable">Dwarf</option>
-        </select>
-        <select
-          name="weight"
-          value={formData.weight}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-        >
+          </select>
+      </div>
+      <div>
+        <label className="block mb-2">Weight</label>
+          <select
+            name="weight"
+            value={formData.weight}
+            onChange={handleChange}
+            className="block w-full bg-gray-200 text-gray-700 text-sm rounded py-3 px-4 focus:outline-none focus:bg-white"
+          >
           <option value="">Select Weight</option>
           <option value="average">BBW</option>
           <option value="average">Heavy Duty</option>
@@ -89,13 +93,17 @@ function Step2({ formData, handleChange, nextStep, prevStep }) {
           <option value="average">Average</option>
           <option value="light">Light</option>
         </select>
-        <select
-          name="build"
-          value={formData.build}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-        >
-          <option value="">Select Looks</option>
+      </div>
+
+      <div>
+        <label className="block mb-2">Build</label>
+          <select
+            name="build"
+            value={formData.build}
+            onChange={handleChange}
+            className="block w-full bg-gray-200 text-gray-700 text-sm rounded py-3 px-4 focus:outline-none focus:bg-white"
+          >
+          <option value="">Build</option>
           <option value="beautiful">Athletic</option>
           <option value="ugly">Curvy</option>
           <option value="beautiful">Chubby</option>
@@ -111,12 +119,16 @@ function Step2({ formData, handleChange, nextStep, prevStep }) {
           <option value="beautiful">Slender</option>
           <option value="ugly">Slim</option>
         </select>
-        <select
-          name="looks"
-          value={formData.looks}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-        >
+      </div>
+
+      <div>
+        <label className="block mb-2">Looks</label>
+          <select
+            name="looks"
+            value={formData.looks}
+            onChange={handleChange}
+            className="block w-full bg-gray-200 text-gray-700 text-sm rounded py-3 px-4 focus:outline-none focus:bg-white"
+          >
           <option value="">Select Looks</option>
           <option value="beautiful">Corporate Type</option>
           <option value="ugly">Goddess</option>
@@ -127,10 +139,46 @@ function Step2({ formData, handleChange, nextStep, prevStep }) {
           <option value="beautiful">Slutty</option>
           <option value="ugly">Stripper</option>
         </select>
+      </div>
 
-        {/* Smoker */}
-        <div>
-          <label className="block mb-2">Smoker?</label>
+      <div>
+        {/* Sexual Orientation */}
+        <label className="block mb-2">Sexual Orientation</label>
+          <select
+            name="sexualOrientation"
+            value={formData.sexualOrientation}
+            onChange={handleChange}
+            className="block w-full bg-gray-200 text-gray-700 text-sm rounded py-3 px-4 focus:outline-none focus:bg-white"
+          >
+          <option value="">Sexual Orientation</option>
+          <option value="mistress">Straight</option>
+          <option value="master">Bisexual</option>
+          <option value="mistress">Lesbian</option>
+          <option value="master">Gay</option>
+          <option value="mistress">Trans Sexual</option>
+        </select>
+      </div>
+
+      <div>
+        <label className="block mb-2">Ethnicity</label>
+        <select
+          name="ethnicity"
+          value={formData.ethnicity}
+          onChange={handleChange}
+          className="block w-full bg-gray-200 text-gray-700 text-sm rounded py-3 px-4 focus:outline-none focus:bg-white"
+        >
+        <option value="">Select Ethnicity</option>
+        <option value="asian">Asian</option>
+        <option value="african">African</option>
+        <option value="caucasian">Caucasian</option>
+        <option value="hispanic">Hispanic</option>
+        <option value="other">Other</option>
+        </select>
+      </div>
+
+      {/* Smoker */}
+      <div>
+        <label className="block mb-2">Smoker?</label>
           <div className="flex space-x-4">
             <label>
               <input
@@ -140,33 +188,18 @@ function Step2({ formData, handleChange, nextStep, prevStep }) {
                 checked={formData.smoker === 'yes'}
                 onChange={handleChange}
               /> Yes
-            </label>
-            <label>
-              <input
-                type="radio"
-                name="smoker"
-                value="no"
-                checked={formData.smoker === 'no'}
-                onChange={handleChange}
-              /> No
-            </label>
-          </div>
-        </div>
-
-        {/* Sexual Orientation */}
-        <select
-          name="sexualOrientation"
-          value={formData.sexualOrientation}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-        >
-          <option value="">Select Sexual Orientation</option>
-          <option value="mistress">Straight</option>
-          <option value="master">Bisexual</option>
-          <option value="mistress">Lesbian</option>
-          <option value="master">Gay</option>
-          <option value="mistress">Trans Sexual</option>
-        </select>
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="smoker"
+            value="no"
+            checked={formData.smoker === 'no'}
+            onChange={handleChange}
+          /> No
+        </label>
+      </div>
+    </div>
 
         {/* Availability */}
         <div>
@@ -219,41 +252,47 @@ function Step2({ formData, handleChange, nextStep, prevStep }) {
         </div>
 
         {/* Language Spoken */}
-        <select
-          name="languageSpoken"
-          value={formData.languageSpoken}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-        >
-          <option value="">Select Language Spoken</option>
-          <option value="english">English</option>
-          <option value="spanish">Spanish</option>
-        </select>
+        <div>
+          <label className="block mb-2">Language Spoken</label>
+            <select
+              name="languageSpoken"
+              value={formData.languageSpoken}
+              onChange={handleChange}
+              className="block w-full bg-gray-200 text-gray-700 text-sm rounded py-3 px-4 focus:outline-none focus:bg-white"
+            >
+            <option value="">Select Language Spoken</option>
+            <option value="english">English</option>
+            <option value="spanish">Spanish</option>
+            </select>
+        </div>
 
         {/* Language Level */}
-        <select
-          name="languageLevel"
-          value={formData.languageLevel}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-        >
-          <option value="">Select Language Level</option>
-          <option value="minimal">Minimal</option>
-          <option value="fluent">Fluent</option>
-          <option value="conversational">Conversational</option>
-        </select>
+        <div>
+          <label className="block mb-2">Language Level</label>
+            <select
+              name="languageLevel"
+              value={formData.languageLevel}
+              onChange={handleChange}
+              className="block w-full bg-gray-200 text-gray-700 text-sm rounded py-3 px-4 focus:outline-none focus:bg-white"
+            >
+            <option value="">Select Language Level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+            </select>
+        </div>
 
         {/* Navigation Buttons */}
-        <div className="flex justify-between mt-6">
+        <div className="flex justify-center mt-6">
           <button
             onClick={prevStep}
-            className="bg-gray-500 text-white p-2 rounded"
+            className="bg-blue-500 text-white px-12 py-2 rounded-full md:w-auto"
           >
             Previous
           </button>
           <button
             onClick={nextStep}
-            className="bg-blue-500 text-white p-2 rounded"
+            className="bg-blue-500 text-white px-12 py-2 rounded-full md:w-auto"
           >
             Next
           </button>

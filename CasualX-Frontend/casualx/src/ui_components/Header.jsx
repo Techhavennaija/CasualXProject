@@ -27,23 +27,23 @@ function Header({ isSideNavOpen }) {
     }, [isDarkMode]);
 
   return (
-    <header
-        className={`sticky top-0 z-50 bg-gray-800 text-white transition-all duration-300 ${
-        isSideNavOpen ? "ml-44" : "ml-16"
-        }`}
+    <header className={`sticky top-0 z-50 bg-gray-800 text-white transition-all duration-300 ${
+      isSideNavOpen ? "ml-44" : "ml-16" }`}
     >
-        <div className="flex justify-between items-center px-2 py-4">
-          <div className="logo">
-            <a href="/" className="text-xl font-bold text-white hover:text-teal-100 transition-colors">Logo</a>
-          </div>
+      <div className="flex justify-between items-center px-2 py-4">
+        {/* Logo */}
+        <div className="logo">
+          <a href="/" className="text-xl font-bold text-white hover:text-teal-100 transition-colors">CASUALX</a>
+        </div>
 
+        {/* Header Right */}
+        <div className="flex items-center space-x-4 px-6">
           {/* Search Icon */}
-          <div className="flex items-center space-x-4 px-6">
-            <div className='rounded-full outline-solid outline-gray-500 bg-gray-700 w-7 h-7 flex items-center justify-center'>
-              <button onClick={toggleSearch} className="p-2 text-white rounded-lg transition-colors">
-                <FaSearch size={20} className="cursor-pointer" />
-              </button>
-            </div>
+          <div className='rounded-full outline-solid outline-gray-500 bg-gray-700 w-7 h-7 flex items-center justify-center'>
+            <button onClick={toggleSearch} className="p-2 text-white rounded-lg transition-colors">
+              <FaSearch size={20} className="cursor-pointer" />
+            </button>
+          </div>
           
             {/* Signup Button */}
             <button className="px-4 py-1 bg-blue-700 shadow-md text-white rounded-full transition-all"
@@ -53,19 +53,16 @@ function Header({ isSideNavOpen }) {
 
             {/* Dark Mode Toggle */}
             <button onClick={toggleDarkMode} className="focus:outline-none">
-              {isDarkMode ? (
-                <FaSun size={22} className="text-white-500" />
-              ) : (
-                <FaMoon size={22} className="text-white-800 dark:text-white" />
+              {isDarkMode ? (<FaSun size={22} className="text-white-500" />) : (<FaMoon size={22} className="text-white-800 dark:text-white" />
               )}
             </button>
-
-          </div>
         </div>
+      </div>
 
         {/* Render the SearchPopup component */}
         {isSearchOpen && <SearchPopup onClose={toggleSearch} />}
-  </header>
+        
+    </header>
   )
 }
 

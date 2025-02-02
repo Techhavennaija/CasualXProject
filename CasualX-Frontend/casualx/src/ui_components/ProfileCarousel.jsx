@@ -99,31 +99,35 @@ import ProfileCard from './ProfileCard';
         autoplaySpeed: 3500,
         responsive: [
         {
-            breakpoint: 1024,
-            settings: {
-            slidesToShow: 2,
-            },
+          breakpoint: 1024,
+          settings: {
+          slidesToShow: 2,
+          },
         },
         {
-            breakpoint: 768,
-            settings: {
-            slidesToShow: 1,
-            },
+          breakpoint: 768,
+          settings: {
+          slidesToShow: 1,
+          },
         },
-        ],
+      ],
     };
 
 function ProfileCarousel() {
   return (
-    <div className="container w-5/6 overflow-hidden">
-      <div className="max-w-full">
-        <Slider {...settings}>
-          {profiles.map((profile) => (
-            <div key={profile.id} className="px-1">
-              <ProfileCard profile={profile} />
-            </div>
-          ))}
-        </Slider>
+    <div>
+      <Slider {...settings}>
+        {profiles.map((profile) => (
+          <div key={profile.id} >
+            <ProfileCard profile={profile} />
+          </div>
+        ))}
+      </Slider>
+      <div className='px-50 py-8 text-center'>
+        <p className='pb-4'>Due to the actions of FRAUDSTERS who have evaded payment after receiving service, our
+          respected gentlemen, ESCORTS now demand payments before service. No Exception.</p>
+        <p className='pb-4'>Clients are EXPECTED to conﬁrm ESCORTS with a video call and provide transportation 
+          upfront. Please do not hesitate to report any Fraudulent Escort.</p>
       </div>
     </div>
   )
