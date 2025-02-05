@@ -45,7 +45,7 @@ function Step1({ formData, handleChange, nextStep, errors, setFormData}) {
   };
 
    // Handle country selection
-   const handleCountryChange = (selectedOption) => {
+  const handleCountryChange = (selectedOption) => {
     setFormData({
       ...formData,
       country: selectedOption.value,
@@ -83,7 +83,7 @@ function Step1({ formData, handleChange, nextStep, errors, setFormData}) {
   };
 
    // Validate email format and extension
-   const validateEmail = (email) => {
+  const validateEmail = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email format
     const validExtensions = ['com', 'org', 'net', 'edu', 'gov']; // Add more extensions if needed
   

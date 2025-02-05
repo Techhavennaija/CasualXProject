@@ -29,7 +29,7 @@ function Header({ isSideNavOpen, toggleSideNav }) {
     }, [isDarkMode]);
 
   return (
-    <header className={`sticky top-0 z-50 bg-gray-800 text-white transition-all duration-200 
+    <header className={`sticky top-0 z-50 bg-gray-800 text-white transition-all duration-300 
       ${ isSideNavOpen ? "md:ml-44" : "md:ml-16" }`}
     >
       <div className="flex justify-between items-center px-2 py-4">
@@ -55,7 +55,7 @@ function Header({ isSideNavOpen, toggleSideNav }) {
           </div>
           
             {/* Signup Button */}
-            <button className="px-4 py-1 bg-blue-700 shadow-md text-white rounded-full transition-all"
+            <button className="px-4 py-1 bg-sky-900 shadow-md text-white rounded-full transition-all"
               onClick={() => alert("Signup clicked!")} // Add signup logic here
               >Register
             </button>

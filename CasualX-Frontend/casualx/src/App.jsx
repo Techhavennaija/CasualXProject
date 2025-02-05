@@ -9,6 +9,7 @@ import RegistrationForm from './ui_components/RegistrationForm'
 import Testimonials from './ui_components/Testimonials'
 import Faqs from './ui_components/Faqs'
 import Events from './ui_components/Events'
+import Rooms from './ui_components/Rooms'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,6 +27,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/search" element={<SearchPopUp />} />
         <Route path="/register" element={<RegistrationForm />} />
+        <Route path="/room-to-let" element={<Rooms />} />
       </Routes>
     </Router>
    </div>
