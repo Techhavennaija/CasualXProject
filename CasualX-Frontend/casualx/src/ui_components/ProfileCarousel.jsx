@@ -116,13 +116,13 @@ import ProfileCard from './ProfileCard';
 function ProfileCarousel() {
   return (
     <div>
-      <Slider {...settings}>
+      {/*<Slider {...settings}>
         {profiles.map((profile) => (
           <div key={profile.id} >
             <ProfileCard profile={profile} />
           </div>
         ))}
-      </Slider>
+      </Slider> */}
       <div className='px-50 py-8 text-center'>
         <p className='pb-4'>Due to the actions of FRAUDSTERS who have evaded payment after receiving service, our
           respected gentlemen, ESCORTS now demand payments before service. No Exception.</p>

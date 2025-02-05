@@ -25,7 +25,7 @@ function SideNav({ isOpen, toggleSideNav }) {
   
     const navLinks = [
         { name: "Home", icon: <FaHome size={20}/>, link: "/" },
-        { name: "Hub", icon: <HiChatBubbleLeftRight size={20}/>, link: "/channels" },
+        { name: "Hub", icon: <HiChatBubbleLeftRight size={20}/>, link: "/hub" },
         { name: "Cam Show", icon: <FaCamera size={20}/>, link: "/cam-show" },
         { name: "Naughty Videos", icon: <FaPhotoVideo size={20}/>, link: "/naughty-videos" },
         { name: "Strippers", icon: <FaPeopleGroup size={20}/>, link: "/strippers" },
@@ -43,8 +43,8 @@ function SideNav({ isOpen, toggleSideNav }) {
       ];
 
   return (
-      <aside className={`fixed top-0 left-0 h-screen bg-gray-800 transition-all duration-300 ${
-        isOpen ? " translate-x-0 w-full md:w-44" : "-translate-x-full md:translate-x-0 md:w-16" }`}
+      <aside className={`fixed top-0 left-0 h-screen bg-gray-800 transition-all duration-200 ease-in-out
+        ${ isOpen ? " w-44" : "w-0 md:w-16" }`}
         >
         {/* Hambuger button to toggle SideNav*/}
         <div className="flex items-center justify-between px-2 py-4">
