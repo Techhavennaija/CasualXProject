@@ -1,4 +1,5 @@
 from rest_framework import generics
+from rest_framework.generics import RetrieveAPIView
 from .models import UserProfile
 from .serializers import UserProfileSerializer
 
